@@ -17,71 +17,73 @@ class SongView: NSView {
     @IBOutlet weak var nextButton: NSButton!
     @IBOutlet weak var bandField: NSTextField!
     
-    // Task Arguments
-    let prevTrackArgs: [String]? = ["/Users/aliyasineser/Desktop/prev_track.scpt"]
-    let nextTrackArgs: [String]? = ["/Users/aliyasineser/Desktop/next_track.scpt"]
-    let playTrackArgs: [String]? = ["/Users/aliyasineser/Desktop/play.scpt"]
-    let pauseTrackArgs: [String]? = ["/Users/aliyasineser/Desktop/pause.scpt"]
-    let songNameArgs: [String]? = ["/Users/aliyasineser/Desktop/getSongName.scpt"]
-    let bandNameArgs: [String]? = ["/Users/aliyasineser/Desktop/getBandName.scpt"]
-    let artworkArgs: [String]? = ["/Users/aliyasineser/Desktop/getArtworkUrl.scpt"]
-    let playerStateArgs: [String]? = ["/Users/aliyasineser/Desktop/player_state.scpt"]
-    
-    
     
     override func viewWillDraw() {
-//        
-//        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.update), userInfo: nil, repeats: true)
-//        
+        playPauseButton.highlight(false)
+        nextButton.highlight(false)
+        prevButton.highlight(false)
         
+        let overEnter = NSEvent.init()
+        playPauseButton.mouseEntered(with: overEnter)
     }
     
     @IBAction func prevSong(_ sender: NSButton) {
-        executeAppleScript(args: prevTrackArgs, waitReturn: false)
-        update()
+        // Get Applescript path and execute
+        let sourcePath = Bundle.main.path(forResource: "prev_track", ofType: "scpt")
+        executeAppleScript(args: [sourcePath!], waitReturn: false)
     }
     
     
     @IBAction func playPauseSong(_ sender: NSButton) {
         
-        let theState = executeAppleScript(args: playerStateArgs, waitReturn: true)
+        // Get Applescript path and execute
+        var sourcePath = Bundle.main.path(forResource: "player_state", ofType: "scpt")
+        let theState = executeAppleScript(args: [sourcePath!], waitReturn: true)
         if (theState == "playing"){
-            executeAppleScript(args: pauseTrackArgs, waitReturn: false)
-            playPauseButton.image = NSImage(named: "Play")
+            sourcePath = Bundle.main.path(forResource: "pause", ofType: "scpt")
+            executeAppleScript(args: [sourcePath!], waitReturn: false)
+            //playPauseButton.image = NSImage(named: "Play")
         }else if(theState == "paused"){
-            executeAppleScript(args: playTrackArgs, waitReturn: false)
-            playPauseButton.image = NSImage(named: "Pause")
+            sourcePath = Bundle.main.path(forResource: "play", ofType: "scpt")
+            executeAppleScript(args: [sourcePath!], waitReturn: false)
+            //playPauseButton.image = NSImage(named: "Pause")
         }
         else{}
-        update()
-
-        
     }
     
     
     func executeAppleScript(args: [String]?, waitReturn: Bool) -> String{
+        // Create a process to execute script
         let task = Process()
+        // Assign Applescript path. Path can be changed, enter your applescript path. Look for "osascript"
         task.launchPath = "/usr/bin/osascript"
+        // Assign arguments. Arguments can be directly file path as in this program does.
+        // Alternatively, developer can choose to "osascript  -e \(Applescript code)" for running directly.
+        // For running directly, just change args as "-e", "\(Applescript code)"
         task.arguments = args
         
+        // Create pipe for capture standart output
         let outPipe = Pipe()
         task.standardOutput = outPipe // to capture standard error, use task.standardError = outPipe
-        
+        // Start execution
         task.launch()
+        // If there should be a return value, capture the standart output and do something with it.
         if(waitReturn){
+            // Read and assign data from pipe
             let fileHandle = outPipe.fileHandleForReading
             let data = fileHandle.readDataToEndOfFile()
             var str:String = String.init(data: data, encoding: String.Encoding.utf8)!
+            // The last character is newline, remove it.
             str.remove(at: str.index(before: str.endIndex))
             return str
         }
-        return ""
+        return "" // If there is no return value for the script, basically return an empty string.
     }
     
     @IBAction func nextSong(_ sender: NSButton) {
-        executeAppleScript(args: nextTrackArgs, waitReturn: false)
-        playPauseButton.image = NSImage(named: "Pause")
-        update()
+        // Get Applescript path and execute
+        let sourcePath = Bundle.main.path(forResource: "next_track", ofType: "scpt")
+        executeAppleScript(args: [sourcePath!], waitReturn: false)
     }
     
     override func draw(_ dirtyRect: NSRect) {
@@ -92,21 +94,36 @@ class SongView: NSView {
     
     func update(){
 
-        let theState = self.executeAppleScript(args: self.playerStateArgs, waitReturn: true)
-        let songName = self.executeAppleScript(args: self.songNameArgs, waitReturn: true)
-        let bandName = self.executeAppleScript(args: self.bandNameArgs, waitReturn: true)
-        let artworkUrl = self.executeAppleScript(args: self.artworkArgs, waitReturn: true)
+        // Get Applescript path and execute
+        var sourcePath = Bundle.main.path(forResource: "player_state", ofType: "scpt")
+        let theState = self.executeAppleScript(args: [sourcePath!], waitReturn: true)
         
+        // Get Applescript path and execute
+        sourcePath = Bundle.main.path(forResource: "getSongName", ofType: "scpt")
+        let songName = self.executeAppleScript(args: [sourcePath!], waitReturn: true)
+        
+        // Get Applescript path and execute
+        sourcePath = Bundle.main.path(forResource: "getBandName", ofType: "scpt")
+        let bandName = self.executeAppleScript(args: [sourcePath!], waitReturn: true)
+        
+        // Get Applescript path and execute
+        sourcePath = Bundle.main.path(forResource: "getArtworkUrl", ofType: "scpt")
+        let artworkUrl = self.executeAppleScript(args: [sourcePath!], waitReturn: true)
+        
+        // Observe current state and update ui for pause or play
         if (theState == "playing"){
             playPauseButton.image = NSImage(named: "Pause")
         }else if(theState == "paused"){
             playPauseButton.image = NSImage(named: "Play")
         }
         
+        // Assign song and band names
         self.songField.stringValue = songName
         self.bandField.stringValue = bandName
         
+        // Create URL for cover of the album
         let url: URL = URL.init(string: artworkUrl)!
+        // Assign the artwork to album cover image
         self.albumCoverView.image = NSImage.init(contentsOf: url)
         
     }

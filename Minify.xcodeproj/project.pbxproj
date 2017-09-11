@@ -14,14 +14,14 @@
 		DDE4264C1F64BB3200954A5C /* MinifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4264B1F64BB3200954A5C /* MinifyTests.swift */; };
 		DDE426571F64C36B00954A5C /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE426561F64C36B00954A5C /* SongView.swift */; };
 		DDE426591F64C75500954A5C /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE426581F64C75500954A5C /* StatusMenuController.swift */; };
-		DDE426621F64E07400954A5C /* getArtworkUrl.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4265A1F64E07400954A5C /* getArtworkUrl.scpt */; };
-		DDE426631F64E07400954A5C /* getBandName.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4265B1F64E07400954A5C /* getBandName.scpt */; };
-		DDE426641F64E07400954A5C /* getSongName.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4265C1F64E07400954A5C /* getSongName.scpt */; };
-		DDE426651F64E07400954A5C /* next_track.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4265D1F64E07400954A5C /* next_track.scpt */; };
-		DDE426661F64E07400954A5C /* pause.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4265E1F64E07400954A5C /* pause.scpt */; };
-		DDE426671F64E07400954A5C /* play.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4265F1F64E07400954A5C /* play.scpt */; };
-		DDE426681F64E07400954A5C /* player_state.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE426601F64E07400954A5C /* player_state.scpt */; };
-		DDE426691F64E07400954A5C /* prev_track.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE426611F64E07400954A5C /* prev_track.scpt */; };
+		DDE426721F66B96B00954A5C /* getArtworkUrl.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266A1F66B96B00954A5C /* getArtworkUrl.scpt */; };
+		DDE426731F66B96B00954A5C /* getBandName.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266B1F66B96B00954A5C /* getBandName.scpt */; };
+		DDE426741F66B96B00954A5C /* getSongName.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266C1F66B96B00954A5C /* getSongName.scpt */; };
+		DDE426751F66B96B00954A5C /* next_track.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266D1F66B96B00954A5C /* next_track.scpt */; };
+		DDE426761F66B96B00954A5C /* pause.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266E1F66B96B00954A5C /* pause.scpt */; };
+		DDE426771F66B96B00954A5C /* play.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266F1F66B96B00954A5C /* play.scpt */; };
+		DDE426781F66B96B00954A5C /* player_state.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE426701F66B96B00954A5C /* player_state.scpt */; };
+		DDE426791F66B96B00954A5C /* prev_track.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE426711F66B96B00954A5C /* prev_track.scpt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +46,14 @@
 		DDE4264D1F64BB3200954A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDE426561F64C36B00954A5C /* SongView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
 		DDE426581F64C75500954A5C /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
-		DDE4265A1F64E07400954A5C /* getArtworkUrl.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = getArtworkUrl.scpt; path = ../../../Desktop/getArtworkUrl.scpt; sourceTree = "<group>"; };
-		DDE4265B1F64E07400954A5C /* getBandName.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = getBandName.scpt; path = ../../../Desktop/getBandName.scpt; sourceTree = "<group>"; };
-		DDE4265C1F64E07400954A5C /* getSongName.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = getSongName.scpt; path = ../../../Desktop/getSongName.scpt; sourceTree = "<group>"; };
-		DDE4265D1F64E07400954A5C /* next_track.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = next_track.scpt; path = ../../../Desktop/next_track.scpt; sourceTree = "<group>"; };
-		DDE4265E1F64E07400954A5C /* pause.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = pause.scpt; path = ../../../Desktop/pause.scpt; sourceTree = "<group>"; };
-		DDE4265F1F64E07400954A5C /* play.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = play.scpt; path = ../../../Desktop/play.scpt; sourceTree = "<group>"; };
-		DDE426601F64E07400954A5C /* player_state.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = player_state.scpt; path = ../../../Desktop/player_state.scpt; sourceTree = "<group>"; };
-		DDE426611F64E07400954A5C /* prev_track.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; name = prev_track.scpt; path = ../../../Desktop/prev_track.scpt; sourceTree = "<group>"; };
+		DDE4266A1F66B96B00954A5C /* getArtworkUrl.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = getArtworkUrl.scpt; sourceTree = "<group>"; };
+		DDE4266B1F66B96B00954A5C /* getBandName.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = getBandName.scpt; sourceTree = "<group>"; };
+		DDE4266C1F66B96B00954A5C /* getSongName.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = getSongName.scpt; sourceTree = "<group>"; };
+		DDE4266D1F66B96B00954A5C /* next_track.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = next_track.scpt; sourceTree = "<group>"; };
+		DDE4266E1F66B96B00954A5C /* pause.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = pause.scpt; sourceTree = "<group>"; };
+		DDE4266F1F66B96B00954A5C /* play.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = play.scpt; sourceTree = "<group>"; };
+		DDE426701F66B96B00954A5C /* player_state.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = player_state.scpt; sourceTree = "<group>"; };
+		DDE426711F66B96B00954A5C /* prev_track.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = prev_track.scpt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,14 +95,14 @@
 		DDE426381F64BB3200954A5C /* Minify */ = {
 			isa = PBXGroup;
 			children = (
-				DDE4265A1F64E07400954A5C /* getArtworkUrl.scpt */,
-				DDE4265B1F64E07400954A5C /* getBandName.scpt */,
-				DDE4265C1F64E07400954A5C /* getSongName.scpt */,
-				DDE4265D1F64E07400954A5C /* next_track.scpt */,
-				DDE4265E1F64E07400954A5C /* pause.scpt */,
-				DDE4265F1F64E07400954A5C /* play.scpt */,
-				DDE426601F64E07400954A5C /* player_state.scpt */,
-				DDE426611F64E07400954A5C /* prev_track.scpt */,
+				DDE4266A1F66B96B00954A5C /* getArtworkUrl.scpt */,
+				DDE4266B1F66B96B00954A5C /* getBandName.scpt */,
+				DDE4266C1F66B96B00954A5C /* getSongName.scpt */,
+				DDE4266D1F66B96B00954A5C /* next_track.scpt */,
+				DDE4266E1F66B96B00954A5C /* pause.scpt */,
+				DDE4266F1F66B96B00954A5C /* play.scpt */,
+				DDE426701F66B96B00954A5C /* player_state.scpt */,
+				DDE426711F66B96B00954A5C /* prev_track.scpt */,
 				DDE426391F64BB3200954A5C /* AppDelegate.swift */,
 				DDE4263B1F64BB3200954A5C /* ViewController.swift */,
 				DDE4263D1F64BB3200954A5C /* Assets.xcassets */,
@@ -210,15 +210,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDE4263E1F64BB3200954A5C /* Assets.xcassets in Resources */,
-				DDE426641F64E07400954A5C /* getSongName.scpt in Resources */,
-				DDE426651F64E07400954A5C /* next_track.scpt in Resources */,
-				DDE426661F64E07400954A5C /* pause.scpt in Resources */,
+				DDE426741F66B96B00954A5C /* getSongName.scpt in Resources */,
+				DDE426751F66B96B00954A5C /* next_track.scpt in Resources */,
+				DDE426761F66B96B00954A5C /* pause.scpt in Resources */,
 				DDE426411F64BB3200954A5C /* Main.storyboard in Resources */,
-				DDE426631F64E07400954A5C /* getBandName.scpt in Resources */,
-				DDE426691F64E07400954A5C /* prev_track.scpt in Resources */,
-				DDE426621F64E07400954A5C /* getArtworkUrl.scpt in Resources */,
-				DDE426671F64E07400954A5C /* play.scpt in Resources */,
-				DDE426681F64E07400954A5C /* player_state.scpt in Resources */,
+				DDE426731F66B96B00954A5C /* getBandName.scpt in Resources */,
+				DDE426791F66B96B00954A5C /* prev_track.scpt in Resources */,
+				DDE426721F66B96B00954A5C /* getArtworkUrl.scpt in Resources */,
+				DDE426771F66B96B00954A5C /* play.scpt in Resources */,
+				DDE426781F66B96B00954A5C /* player_state.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
