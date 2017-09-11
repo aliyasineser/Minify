@@ -6,8 +6,9 @@
       "scale" : "1x"
     },
     {
-      "idiom" : "mac",
       "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "icons8-Music Record-32.png",
       "scale" : "2x"
     },
     {
