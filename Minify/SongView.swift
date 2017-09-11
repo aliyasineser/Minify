@@ -16,15 +16,13 @@ class SongView: NSView {
     @IBOutlet weak var songField: NSTextField!
     @IBOutlet weak var nextButton: NSButton!
     @IBOutlet weak var bandField: NSTextField!
-    
-    
+
     override func viewWillDraw() {
+        // Highlighs looks bad while activating buttons.
         playPauseButton.highlight(false)
         nextButton.highlight(false)
         prevButton.highlight(false)
         
-        let overEnter = NSEvent.init()
-        playPauseButton.mouseEntered(with: overEnter)
     }
     
     @IBAction func prevSong(_ sender: NSButton) {
