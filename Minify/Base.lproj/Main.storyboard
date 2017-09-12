@@ -728,7 +728,7 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                             <connections>
-                                <action selector="nextSong:" target="d3s-1i-mf5" id="jw5-3F-4OJ"/>
+                                <action selector="nextSong:" target="d3s-1i-mf5" id="c11-r8-U9a"/>
                             </connections>
                         </button>
                     </subviews>
