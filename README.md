@@ -1,8 +1,6 @@
 # Minify
 Spotify Mini Player for OSX
 
-Download: https://goo.gl/cgK9ih
-
 Basic mini player for spotify. Features:
 - Previous, next, play and pause configurations. 
 - Basic song info (album cover, song and artist name)
