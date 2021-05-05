@@ -8,3 +8,14 @@ Basic mini player for spotify. Features:
 Requirement:
 - Working spotify program
 - Applescript : Path to applescript must be "/usr/bin/osascript", otherwise you should change it from SongView.swift 
+
+
+Screenshots:
+
+- Minify Layout
+
+![Application Layout](/Assets/FullscreenSpotifyWithMinify.png?raw=false "Layout")
+
+- Spotify & Minify
+
+![Application Layout with Spotify](/Assets/MinifyLayout.png?raw=false "Spotify Fullscreen with Minify")
