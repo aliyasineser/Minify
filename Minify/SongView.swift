@@ -77,8 +77,10 @@ class SongView: NSView {
             let fileHandle = outPipe.fileHandleForReading
             let data = fileHandle.readDataToEndOfFile()
             var str:String = String.init(data: data, encoding: String.Encoding.utf8)!
-            // The last character is newline, remove it.
-            str.remove(at: str.index(before: str.endIndex))
+            if str.count != 0 { // There is no application
+                // The last character is newline, remove it.
+                str.remove(at: str.index(before: str.endIndex))
+            }
             return str
         }
         return "" // If there is no return value for the script, basically return an empty string.
@@ -126,9 +128,12 @@ class SongView: NSView {
         self.bandField.stringValue = bandName
         
         // Create URL for cover of the album
-        let url: URL = URL.init(string: artworkUrl)!
-        // Assign the artwork to album cover image
-        self.albumCoverView.image = NSImage.init(contentsOf: url)
+        if let url: URL = URL.init(string: artworkUrl) {
+            // Assign the artwork to album cover image
+            self.albumCoverView.image = NSImage.init(contentsOf: url)
+        }
+        
+        
         
     }
     
