@@ -28,7 +28,9 @@ class SongView: NSView {
     @IBAction func prevSong(_ sender: NSButton) {
         // Get Applescript path and execute
         let sourcePath = Bundle.main.path(forResource: "prev_track", ofType: "scpt")
-        executeAppleScript(args: [sourcePath!], waitReturn: false)
+        if let source = sourcePath {
+            executeAppleScript(args: [source], waitReturn: false)
+        }
     }
     
     
@@ -39,18 +41,22 @@ class SongView: NSView {
         let theState = executeAppleScript(args: [sourcePath!], waitReturn: true)
         if (theState == "playing"){
             sourcePath = Bundle.main.path(forResource: "pause", ofType: "scpt")
-            executeAppleScript(args: [sourcePath!], waitReturn: false)
+            if let source = sourcePath {
+                executeAppleScript(args: [source], waitReturn: false)
+            }
             //playPauseButton.image = NSImage(named: "Play")
         }else if(theState == "paused"){
             sourcePath = Bundle.main.path(forResource: "play", ofType: "scpt")
-            executeAppleScript(args: [sourcePath!], waitReturn: false)
+            if let source = sourcePath {
+                executeAppleScript(args: [source], waitReturn: false)
+            }
             //playPauseButton.image = NSImage(named: "Pause")
         }
         else{}
     }
     
     
-    func executeAppleScript(args: [String]?, waitReturn: Bool) -> String{
+    func executeAppleScript(args: [String]?, waitReturn: Bool) -> String {
         // Create a process to execute script
         let task = Process()
         // Assign Applescript path. Path can be changed, enter your applescript path. Look for "osascript"
@@ -90,7 +96,7 @@ class SongView: NSView {
         
     }
     
-    func update(){
+    @objc func update(){
 
         // Get Applescript path and execute
         var sourcePath = Bundle.main.path(forResource: "player_state", ofType: "scpt")
