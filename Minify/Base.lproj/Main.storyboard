@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -671,79 +672,100 @@
                     </items>
                 </menu>
                 <customView id="d3s-1i-mf5" userLabel="Song View" customClass="SongView" customModule="Minify">
-                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                    <rect key="frame" x="0.0" y="0.0" width="230" height="398"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NFb-91-9sc" userLabel="AlbumCoverView">
-                            <rect key="frame" x="25" y="90" width="100" height="100"/>
+                            <rect key="frame" x="17" y="195" width="196" height="196"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="QTC-Hy-xTl"/>
-                                <constraint firstAttribute="width" constant="100" id="n44-bI-lgo"/>
+                                <constraint firstAttribute="width" secondItem="NFb-91-9sc" secondAttribute="height" multiplier="1:1" id="GoG-gX-CYA"/>
+                                <constraint firstAttribute="height" constant="190" id="Vm5-cs-Q40"/>
+                                <constraint firstAttribute="width" constant="190" id="pgm-Ih-3QB"/>
                             </constraints>
-                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AppIcon" id="YOh-fA-VNJ"/>
+                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" imageFrameStyle="groove" image="exampleAlbumArt" id="YOh-fA-VNJ"/>
                         </imageView>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JCL-HN-QVs" userLabel="songName">
-                            <rect key="frame" x="25" y="71" width="12" height="16"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="." id="u8y-rt-p7S">
-                                <font key="font" metaFont="system"/>
-                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-sb-2F9" userLabel="bandName">
-                            <rect key="frame" x="25" y="52" width="12" height="16"/>
-                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="." id="alg-Uk-MGl">
-                                <font key="font" metaFont="system"/>
+                            <rect key="frame" x="8" y="131" width="214" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="PTt-UY-Hoo"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Example Band" id="alg-Uk-MGl">
+                                <font key="font" size="14" name="AppleGothic"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
                         </textField>
-                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-2w-UR8" userLabel="prevButton">
-                            <rect key="frame" x="25" y="6" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Prev" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gOM-DX-dlT">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="prevSong:" target="d3s-1i-mf5" id="QYw-dl-obH"/>
-                            </connections>
-                        </button>
-                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZD-yT-kmy" userLabel="playPauseButton">
-                            <rect key="frame" x="60" y="6" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Play" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="SDD-YB-IAF">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="playPauseSong:" target="d3s-1i-mf5" id="OMv-kc-IHJ"/>
-                            </connections>
-                        </button>
-                        <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rcr-dC-IGe" userLabel="nextButton">
-                            <rect key="frame" x="95" y="6" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Next" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tIe-Jb-c8u">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="nextSong:" target="d3s-1i-mf5" id="c11-r8-U9a"/>
-                            </connections>
-                        </button>
+                        <stackView distribution="fillProportionally" orientation="horizontal" alignment="centerY" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPv-Pv-24o">
+                            <rect key="frame" x="20" y="15" width="190" height="96"/>
+                            <subviews>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-2w-UR8" userLabel="prevButton">
+                                    <rect key="frame" x="0.0" y="36" width="54" height="24"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarSkipToStartTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gOM-DX-dlT">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system" size="25"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="prevSong:" target="d3s-1i-mf5" id="QYw-dl-obH"/>
+                                    </connections>
+                                </button>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="bZD-yT-kmy" userLabel="playPauseButton">
+                                    <rect key="frame" x="74" y="35" width="42" height="25"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarPlayTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="SDD-YB-IAF">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system" size="25"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="playPauseSong:" target="d3s-1i-mf5" id="OMv-kc-IHJ"/>
+                                    </connections>
+                                </button>
+                                <button translatesAutoresizingMaskIntoConstraints="NO" id="rcr-dC-IGe" userLabel="nextButton">
+                                    <rect key="frame" x="136" y="36" width="54" height="24"/>
+                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarSkipToEndTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tIe-Jb-c8u">
+                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                        <font key="font" metaFont="system" size="25"/>
+                                    </buttonCell>
+                                    <connections>
+                                        <action selector="nextSong:" target="d3s-1i-mf5" id="c11-r8-U9a"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JCL-HN-QVs" userLabel="songName" customClass="Scroll">
+                            <rect key="frame" x="8" y="163" width="214" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Hk2-KS-mid"/>
+                            </constraints>
+                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Example Song" id="u8y-rt-p7S">
+                                <font key="font" size="18" name="AppleGothic"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="JCL-HN-QVs" firstAttribute="top" secondItem="NFb-91-9sc" secondAttribute="bottom" constant="3" id="2rT-Ov-4Nl"/>
-                        <constraint firstItem="NFb-91-9sc" firstAttribute="top" secondItem="d3s-1i-mf5" secondAttribute="top" constant="10" id="3Br-Vx-Hde"/>
-                        <constraint firstItem="NFb-91-9sc" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="25" id="KVj-t0-x1X"/>
-                        <constraint firstItem="JCL-HN-QVs" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="27" id="NDm-ek-nyK"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JCL-HN-QVs" secondAttribute="trailing" constant="27" id="fcF-Ca-7eq"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IaV-sb-2F9" secondAttribute="trailing" constant="27" id="g1V-FM-9Hi"/>
-                        <constraint firstItem="JCL-HN-QVs" firstAttribute="top" secondItem="NFb-91-9sc" secondAttribute="bottom" constant="3" id="gag-wB-brm"/>
-                        <constraint firstItem="IaV-sb-2F9" firstAttribute="top" secondItem="JCL-HN-QVs" secondAttribute="bottom" constant="3" id="tur-H6-C6l"/>
-                        <constraint firstItem="IaV-sb-2F9" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="27" id="w3X-LP-FMz"/>
-                        <constraint firstItem="IaV-sb-2F9" firstAttribute="top" secondItem="JCL-HN-QVs" secondAttribute="bottom" constant="3" id="xuD-8g-BsP"/>
-                        <constraint firstAttribute="trailing" secondItem="NFb-91-9sc" secondAttribute="trailing" constant="25" id="xwn-bz-km3"/>
+                        <constraint firstItem="NFb-91-9sc" firstAttribute="top" secondItem="d3s-1i-mf5" secondAttribute="top" constant="10" id="0kX-f6-BoI"/>
+                        <constraint firstItem="sPv-Pv-24o" firstAttribute="top" secondItem="IaV-sb-2F9" secondAttribute="bottom" constant="20" id="1Gp-zn-ZP6"/>
+                        <constraint firstAttribute="bottom" secondItem="sPv-Pv-24o" secondAttribute="bottom" constant="15" id="6Ol-aU-j3M"/>
+                        <constraint firstItem="NFb-91-9sc" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="20" id="EjX-o2-O6t"/>
+                        <constraint firstAttribute="trailing" secondItem="sPv-Pv-24o" secondAttribute="trailing" constant="20" id="Jiz-i4-PBs"/>
+                        <constraint firstItem="sPv-Pv-24o" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="20" id="NRH-m4-c49"/>
+                        <constraint firstAttribute="trailing" secondItem="IaV-sb-2F9" secondAttribute="trailing" constant="10" id="Psy-XT-0Gb"/>
+                        <constraint firstItem="JCL-HN-QVs" firstAttribute="top" secondItem="NFb-91-9sc" secondAttribute="bottom" constant="10" id="bfW-Ko-7Fc"/>
+                        <constraint firstItem="IaV-sb-2F9" firstAttribute="top" secondItem="JCL-HN-QVs" secondAttribute="bottom" constant="15" id="eaO-S0-K8M"/>
+                        <constraint firstItem="JCL-HN-QVs" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="10" id="eh5-gE-RGF"/>
+                        <constraint firstAttribute="trailing" secondItem="JCL-HN-QVs" secondAttribute="trailing" constant="10" id="gfl-ue-klN"/>
+                        <constraint firstAttribute="trailing" secondItem="NFb-91-9sc" secondAttribute="trailing" constant="20" id="plQ-mF-ImC"/>
+                        <constraint firstItem="IaV-sb-2F9" firstAttribute="leading" secondItem="d3s-1i-mf5" secondAttribute="leading" constant="10" id="sDb-40-Tll"/>
                     </constraints>
                     <connections>
                         <outlet property="albumCoverView" destination="NFb-91-9sc" id="vQT-Hj-ccv"/>
@@ -765,9 +787,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon" width="24" height="24"/>
-        <image name="Next" width="24" height="24"/>
-        <image name="Play" width="24" height="24"/>
-        <image name="Prev" width="24" height="24"/>
+        <image name="NSTouchBarPlayTemplate" width="12" height="13"/>
+        <image name="NSTouchBarSkipToEndTemplate" width="16" height="13"/>
+        <image name="NSTouchBarSkipToStartTemplate" width="16" height="13"/>
+        <image name="exampleAlbumArt" width="5284" height="3522"/>
     </resources>
 </document>

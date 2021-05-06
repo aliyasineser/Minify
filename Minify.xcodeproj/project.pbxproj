@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD86091A26437AC3002CF1B1 /* ScrollingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86091926437AC3002CF1B1 /* ScrollingTextView.swift */; };
 		DDE4263A1F64BB3200954A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE426391F64BB3200954A5C /* AppDelegate.swift */; };
 		DDE4263C1F64BB3200954A5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4263B1F64BB3200954A5C /* ViewController.swift */; };
 		DDE4263E1F64BB3200954A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE4263D1F64BB3200954A5C /* Assets.xcassets */; };
@@ -22,6 +23,8 @@
 		DDE426771F66B96B00954A5C /* play.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE4266F1F66B96B00954A5C /* play.scpt */; };
 		DDE426781F66B96B00954A5C /* player_state.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE426701F66B96B00954A5C /* player_state.scpt */; };
 		DDE426791F66B96B00954A5C /* prev_track.scpt in Resources */ = {isa = PBXBuildFile; fileRef = DDE426711F66B96B00954A5C /* prev_track.scpt */; };
+		DDE6A1CC2643690F00BFCD35 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = DDE6A1CA2643690E00BFCD35 /* Assets */; };
+		DDE6A1CD2643690F00BFCD35 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DDE6A1CB2643690E00BFCD35 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DD86091926437AC3002CF1B1 /* ScrollingTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingTextView.swift; sourceTree = "<group>"; };
 		DDE426361F64BB3200954A5C /* Minify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE426391F64BB3200954A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE4263B1F64BB3200954A5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		DDE4266F1F66B96B00954A5C /* play.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = play.scpt; sourceTree = "<group>"; };
 		DDE426701F66B96B00954A5C /* player_state.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = player_state.scpt; sourceTree = "<group>"; };
 		DDE426711F66B96B00954A5C /* prev_track.scpt */ = {isa = PBXFileReference; lastKnownFileType = file; path = prev_track.scpt; sourceTree = "<group>"; };
+		DDE6A1CA2643690E00BFCD35 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		DDE6A1CB2643690E00BFCD35 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,8 @@
 		DDE4262D1F64BB3200954A5C = {
 			isa = PBXGroup;
 			children = (
+				DDE6A1CA2643690E00BFCD35 /* Assets */,
+				DDE6A1CB2643690E00BFCD35 /* README.md */,
 				DDE426381F64BB3200954A5C /* Minify */,
 				DDE4264A1F64BB3200954A5C /* MinifyTests */,
 				DDE426371F64BB3200954A5C /* Products */,
@@ -110,6 +118,7 @@
 				DDE426421F64BB3200954A5C /* Info.plist */,
 				DDE426561F64C36B00954A5C /* SongView.swift */,
 				DDE426581F64C75500954A5C /* StatusMenuController.swift */,
+				DD86091926437AC3002CF1B1 /* ScrollingTextView.swift */,
 			);
 			path = Minify;
 			sourceTree = "<group>";
@@ -215,9 +224,11 @@
 				DDE426761F66B96B00954A5C /* pause.scpt in Resources */,
 				DDE426411F64BB3200954A5C /* Main.storyboard in Resources */,
 				DDE426731F66B96B00954A5C /* getBandName.scpt in Resources */,
+				DDE6A1CD2643690F00BFCD35 /* README.md in Resources */,
 				DDE426791F66B96B00954A5C /* prev_track.scpt in Resources */,
 				DDE426721F66B96B00954A5C /* getArtworkUrl.scpt in Resources */,
 				DDE426771F66B96B00954A5C /* play.scpt in Resources */,
+				DDE6A1CC2643690F00BFCD35 /* Assets in Resources */,
 				DDE426781F66B96B00954A5C /* player_state.scpt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +250,7 @@
 				DDE426571F64C36B00954A5C /* SongView.swift in Sources */,
 				DDE4263C1F64BB3200954A5C /* ViewController.swift in Sources */,
 				DDE426591F64C75500954A5C /* StatusMenuController.swift in Sources */,
+				DD86091A26437AC3002CF1B1 /* ScrollingTextView.swift in Sources */,
 				DDE4263A1F64BB3200954A5C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -378,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -393,7 +405,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Minify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aye.Minify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -408,7 +420,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Minify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aye.Minify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -118,9 +118,9 @@ class SongView: NSView {
         
         // Observe current state and update ui for pause or play
         if (theState == "playing"){
-            playPauseButton.image = NSImage(named: "Pause")
+            playPauseButton.image = NSImage(named: "NSTouchBarPauseTemplate")
         }else if(theState == "paused"){
-            playPauseButton.image = NSImage(named: "Play")
+            playPauseButton.image = NSImage(named: "NSTouchBarPlayTemplate")
         }
         
         // Assign song and band names
