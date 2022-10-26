@@ -22,7 +22,7 @@ class StatusMenuController: NSObject {
     
     override func awakeFromNib() {
         // Initiation of Menu bar app
-        let icon = NSImage(named: "AppIcon32") 
+        let icon = NSImage(named: "AppIcon32")
         icon?.isTemplate = true // best for dark mode
         statusItem.button?.image = icon
         statusItem.menu = statusMenu

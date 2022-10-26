@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -699,7 +699,7 @@
                             <rect key="frame" x="20" y="15" width="190" height="96"/>
                             <subviews>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-2w-UR8" userLabel="prevButton">
-                                    <rect key="frame" x="0.0" y="36" width="54" height="24"/>
+                                    <rect key="frame" x="0.0" y="36.5" width="54" height="23.5"/>
                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarSkipToStartTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="gOM-DX-dlT">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="25"/>
@@ -709,7 +709,7 @@
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="bZD-yT-kmy" userLabel="playPauseButton">
-                                    <rect key="frame" x="74" y="35" width="42" height="25"/>
+                                    <rect key="frame" x="74" y="36" width="42" height="24.5"/>
                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarPlayTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="SDD-YB-IAF">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="25"/>
@@ -719,7 +719,7 @@
                                     </connections>
                                 </button>
                                 <button translatesAutoresizingMaskIntoConstraints="NO" id="rcr-dC-IGe" userLabel="nextButton">
-                                    <rect key="frame" x="136" y="36" width="54" height="24"/>
+                                    <rect key="frame" x="136" y="36.5" width="54" height="23.5"/>
                                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSTouchBarSkipToEndTemplate" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="tIe-Jb-c8u">
                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                         <font key="font" metaFont="system" size="25"/>
@@ -788,8 +788,8 @@
     </scenes>
     <resources>
         <image name="NSTouchBarPlayTemplate" width="12" height="13"/>
-        <image name="NSTouchBarSkipToEndTemplate" width="16" height="13"/>
-        <image name="NSTouchBarSkipToStartTemplate" width="16" height="13"/>
+        <image name="NSTouchBarSkipToEndTemplate" width="15" height="13"/>
+        <image name="NSTouchBarSkipToStartTemplate" width="15" height="13"/>
         <image name="exampleAlbumArt" width="5284" height="3522"/>
     </resources>
 </document>

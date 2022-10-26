@@ -80,6 +80,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD48B0882909AFE100F4C5B9 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				DDE4266A1F66B96B00954A5C /* getArtworkUrl.scpt */,
+				DDE4266B1F66B96B00954A5C /* getBandName.scpt */,
+				DDE4266C1F66B96B00954A5C /* getSongName.scpt */,
+				DDE4266D1F66B96B00954A5C /* next_track.scpt */,
+				DDE4266E1F66B96B00954A5C /* pause.scpt */,
+				DDE4266F1F66B96B00954A5C /* play.scpt */,
+				DDE426701F66B96B00954A5C /* player_state.scpt */,
+				DDE426711F66B96B00954A5C /* prev_track.scpt */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		DD48B0892909AFF400F4C5B9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDE4263F1F64BB3200954A5C /* Main.storyboard */,
+				DDE426561F64C36B00954A5C /* SongView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD48B08A2909AFFA00F4C5B9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDE426581F64C75500954A5C /* StatusMenuController.swift */,
+				DDE4263B1F64BB3200954A5C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DD48B08B2909B00600F4C5B9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DD86091926437AC3002CF1B1 /* ScrollingTextView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DD48B08C2909B01000F4C5B9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DDE426391F64BB3200954A5C /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DD48B08D2909B02100F4C5B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DDE4263D1F64BB3200954A5C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		DDE4262D1F64BB3200954A5C = {
 			isa = PBXGroup;
 			children = (
@@ -103,22 +160,13 @@
 		DDE426381F64BB3200954A5C /* Minify */ = {
 			isa = PBXGroup;
 			children = (
-				DDE4266A1F66B96B00954A5C /* getArtworkUrl.scpt */,
-				DDE4266B1F66B96B00954A5C /* getBandName.scpt */,
-				DDE4266C1F66B96B00954A5C /* getSongName.scpt */,
-				DDE4266D1F66B96B00954A5C /* next_track.scpt */,
-				DDE4266E1F66B96B00954A5C /* pause.scpt */,
-				DDE4266F1F66B96B00954A5C /* play.scpt */,
-				DDE426701F66B96B00954A5C /* player_state.scpt */,
-				DDE426711F66B96B00954A5C /* prev_track.scpt */,
-				DDE426391F64BB3200954A5C /* AppDelegate.swift */,
-				DDE4263B1F64BB3200954A5C /* ViewController.swift */,
-				DDE4263D1F64BB3200954A5C /* Assets.xcassets */,
-				DDE4263F1F64BB3200954A5C /* Main.storyboard */,
+				DD48B08D2909B02100F4C5B9 /* Resources */,
+				DD48B08C2909B01000F4C5B9 /* Core */,
+				DD48B08B2909B00600F4C5B9 /* Utils */,
+				DD48B08A2909AFFA00F4C5B9 /* Controller */,
+				DD48B0892909AFF400F4C5B9 /* View */,
+				DD48B0882909AFE100F4C5B9 /* Scripts */,
 				DDE426421F64BB3200954A5C /* Info.plist */,
-				DDE426561F64C36B00954A5C /* SongView.swift */,
-				DDE426581F64C75500954A5C /* StatusMenuController.swift */,
-				DD86091926437AC3002CF1B1 /* ScrollingTextView.swift */,
 			);
 			path = Minify;
 			sourceTree = "<group>";
@@ -180,7 +228,7 @@
 					New,
 				);
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = aliyasineser;
 				TargetAttributes = {
 					DDE426351F64BB3200954A5C = {
@@ -319,6 +367,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -379,6 +428,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -403,9 +453,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = MinifyIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = Minify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aye.Minify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -418,9 +469,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = MinifyIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = Minify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aye.Minify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -433,6 +485,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = MinifyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aye.MinifyTests;
@@ -448,6 +501,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				INFOPLIST_FILE = MinifyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aye.MinifyTests;
