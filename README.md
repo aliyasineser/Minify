@@ -12,10 +12,10 @@ Requirement:
 
 Screenshots:
 
-- Minify Layout
+- Spotify & Minify
 
 ![Application Layout](/Assets/FullscreenSpotifyWithMinify.png?raw=false "Layout")
 
-- Spotify & Minify
+- Minify Layout
 
 ![Application Layout with Spotify](/Assets/MinifyLayout.png?raw=false "Spotify Fullscreen with Minify")
